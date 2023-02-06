@@ -14,6 +14,8 @@ const Products = () => {
     const [typeFilter,setTypeFilter] = useState([]);
     const [costFilter,setCostFilter] = useState([]);
 
+    function getBaseURL()
+    {
     if(typeFilters.length)
           {
             baseURL=tempBaseURL;
@@ -22,10 +24,16 @@ const Products = () => {
             baseURL+=`type[]=${type}&`;
             });
           }
+      else
+        {
+          baseURL = tempBaseURL;
+        }
+    }
           
     useEffect(()=>{
       async function fetchProducts(){
         try{
+          getBaseURL();
           setLoading(true);
           const res = await axios.get(baseURL);
           setLoading(false);
@@ -56,6 +64,7 @@ const Products = () => {
                 src={product.image}
                 alt=""
                 width="250px"
+                className='img-shoe'
               />
             </Link>
             <br />

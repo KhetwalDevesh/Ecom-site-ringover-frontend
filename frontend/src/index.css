@@ -62,6 +62,7 @@
 
 .cost-text , .type-text{
   font-size: 1.3rem;
+  padding-bottom: 8px;
 }
 
 .cost-filter-items,.type-filter-items{
@@ -77,6 +78,7 @@
 
 .container{
   display: flex;
+  padding : 5px;
 }
 
 .product-detail{
@@ -223,4 +225,146 @@ line-height: 2rem; /* 32px */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width:1600px) {
+  .store-products{
+    display: grid;
+    grid-template-columns:  repeat(3, minmax(0, 1fr));
+    gap:2rem;
+  }
+  .img-shoe{
+    width: 200px;
+  }
+  .cost-text,.type-text{
+    padding-bottom: 5px;
+  }
+  .product-detail{
+    padding:6rem;
+  }
+}
+
+@media (max-width:1400px){
+  .store-products-container{
+    padding:2rem;
+  }
+  .checkbox{
+    width: 8px;
+    height: 14px;
+  }
+  .product-detail-image{
+    width: 300px;
+    height: 300px;
+  }
+  .pd-name-brand-in{
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  .pd-price-in{
+    font-size: 1.4rem;
+  }
+  .add-item-to-cart-btn{
+    width: 10rem;
+    height: 3rem;
+  }
+  .product-detail{
+    gap:40px;
+    width: 40rem;
+  }
+  .product-detail-in-store{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:1200px){
+  .img-shoe{
+    width: 150px;
+  }
+  .filter-items{
+    padding: 15px;
+    padding-top:15px;
+  }
+  .store-products-container{
+    padding-top:15px;
+  }
+  .cart-container-out{
+    padding-top:15px;
+  }
+  .cart-heading, .shoe-header, .filter-header{
+    font-size:1.5rem;
+  }
+  .type-text,.cost-text{
+    font-size:1.2rem;
+    padding-left:5px;
+    padding-bottom: 5px;
+  }
+  .container{
+    font-size: 15px;
+    display: flex;
+  }
+  .checkbox{
+    width: 4px;
+    height: 14px;
+  }
+  .product-detail{
+    padding : 4rem;
+    width: 30rem;
+  }
+  .product-detail-in-store{
+    display: flex;
+    justify-content: space-between;
+  }
+  .product-detail-image{
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-width:1050px){
+  .subtotal{
+    padding-left: 15px;
+    padding-right:15px;
+  }
+  .img-shoe{
+    width: 100px;
+  }
+  .store-products-container{
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width:900px)
+{
+  .store-products-container{
+    padding-left : 2rem;
+    padding-right : 2rem;
+  }
+  .product-detail-image{
+    width: 200px;
+    height: 200px;
+  }
+  .product-detail{
+    padding:4rem; 
+    gap:30px
+  }
+  .pd-name-brand-in{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .add-item-to-cart-btn{
+    width: 8rem;
+    height: 2rem;
+    font-size : 0.9rem;
+  }
+  .pd-name-brand-out{
+    padding:20px;
+  }
+  .pd-price-in{
+    font-size: 1.3rem;
+  }
+  .product-detail-in-store{
+    gap:40px;
+  }
 }
